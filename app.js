@@ -9,12 +9,13 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var hbs = require('hbs');
+var mysql = require('mysql');
 
 hbs.registerPartials(__dirname + '/views/partials', function() {
 	console.log('partials registered');
 });
 
-var mysql = require('mysql');
+
 var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'username',
