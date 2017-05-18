@@ -1,0 +1,308 @@
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Fréquentation</a></li>
+		<li><a href="#tabs-2">Emprunt / Retour</a></li>
+
+	</ul>
+	<form>
+		<div id="tabs-1">
+
+			<div class="formulaire_frequentation">
+				<fieldset>
+					<legend>Date</legend>
+					<div class="date">
+						<div class="jour form-group">
+							<label for="jour">Jour de la semaine :</label><br>
+							<select name="jour" id="jour">
+								<option value="lundi">Lundi</option>
+								<option value="mardi">Mardi</option>
+								<option value="mercredi">Mercredi</option>
+								<option value="jeudi">Jeudi</option>
+								<option value="vendredi">Vendredi</option>
+								<option value="samedi">Samedi</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="date">Date : </label><br>
+							<input type="text" id="datepicker" name="date">
+						</div>
+						<div class="heure form-group">
+							<label for="hours">Heure : </label><br>
+							<input type="datetime" id="setTime" name="hours" autocomplete="off" placeholder="ex : 09:30:00">
+							<input type="button" id="setTimeButton" value="Heure actuelle"></input>
+						</div>
+						<div class="periode form-group">
+							<label for="vacances">Vacances :</label>
+							<input type="checkbox" name="vacances" id="vacances">
+						</div>
+						<div class="consultation form-group">
+							<label for="consult_place">Consultation sur place :</label>
+							<input type="checkbox" name="consult_place" id="consult_place">
+						</div>
+						<div class="visiteur form-group">
+							<label for="vne">Visiteur non emprunteur :</label>
+							<input type="checkbox" name="vne" id="vne">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Lecteur</legend>
+					<select name="lecteur" id="lecteur">
+						<option value="0">La base de données est vide</option>
+					</select>
+				</fieldset>
+			</div>
+			<br>
+
+			<button type="submit" class="btn btn-primary" id="submit_btn">Valider</button>
+
+		</div>
+
+		<div id="tabs-2">
+			<fieldset>
+				<legend>Type d'action</legend>
+
+				<div class="emprunt_retour">
+					<div class="emprunt">
+						<input type="radio" name="emprunt_retour" id="emprunt" value="emprunt">
+						<label for="emprunt">Emprunt</label>
+					</div>
+					<div class="retour">
+						<input type="radio" name="emprunt_retour" id="retour" value="retour">
+						<label for="retour">Retour</label>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<br>
+			<fieldset>
+
+				<legend>Informations documents</legend>
+
+				<div class="container_form_docs">
+
+					<fieldset>
+
+						<legend>Document 1</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre1">Nombre</label><br>
+								<input type="Number" id="nombre1" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type1">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie1">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox1">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox1" id="mdl_checkbox1">
+							</div>
+
+						</div>
+
+					</fieldset>
+					<fieldset>
+						
+						<legend>Document 2</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre2">Nombre</label><br>
+								<input type="Number" id="nombre2" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type2">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie2">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox2">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox2" id="mdl_checkbox2">
+							</div>
+						</div>
+
+					</fieldset>
+					<fieldset>
+						
+						<legend>Document 3</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre3">Nombre</label><br>
+								<input type="Number" id="nombre3" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type3">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie3">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox3">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox3" id="mdl_checkbox3">
+							</div>
+						</div>
+
+					</fieldset>
+					<fieldset>
+
+						<legend>Document 4</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre4">Nombre</label><br>
+								<input type="Number" id="nombre4" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type4">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie4">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox4">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox4" id="mdl_checkbox4">
+							</div>
+						</div>
+
+					</fieldset>
+					<fieldset>
+
+						<legend>Document 5</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre5">Nombre</label><br>
+								<input type="Number" id="nombre5" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type5">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie5">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox5">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox5" id="mdl_checkbox5">
+							</div>
+						</div>
+
+					</fieldset>
+					<fieldset>
+
+						<legend>Document 6</legend>
+
+						<div class="form_emprunt_retour">
+							<div class="nombre_emprunt_retour form-group">
+								<label for="nombre6">Nombre</label><br>
+								<input type="Number" id="nombre6" size="10">
+							</div>
+							<div class="type_doc form-group">
+								<select name="type" id="type6">
+									<option value="roman">Roman</option>
+									<option value="roman_policier">Roman Policier</option>
+									<option value="documentaire">Documentaire</option>
+									<option value="...">...</option>
+								</select>
+							</div>
+							<div class="categorie form-group">
+								<select name="categorie" id="categorie6">
+									<option value="enfant">Enfant</option>
+									<option value="ado">Ado</option>
+									<option value="adulte">Adulte</option>
+								</select>
+							</div>
+							<div class="mdl form-group">
+								<label for="mdl_checkbox6">Document MDL : </label>
+								<input type="checkbox" name="mdl_checkbox6" id="mdl_checkbox6">
+							</div>
+						</div>
+
+					</fieldset>
+
+				</div>
+
+				<br><br>
+
+				<div class="presence_lecteur form-group">
+					<label for="presence">Lecteur absent : </label>
+					<input type="checkbox" name="presence" id="presence">
+				</div>
+
+			</fieldset>
+
+		</div>
+
+	</form>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/timepicker.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$( function() {
+		$( "#tabs" ).tabs();
+	} );
+	$( function() {
+		$("#datepicker").datepicker();
+	});
+	$( function() {
+		$('#setTimeButton').on('click', function() {
+			$('#setTime').val(new Date().toLocaleTimeString());
+		});
+	});
+</script>
