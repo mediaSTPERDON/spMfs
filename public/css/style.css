@@ -1,0 +1,21 @@
+.formulaire_frequentation {
+	display: flex;
+	justify-content: space-around;
+}
+
+#submit_btn {
+	margin-left: 50%;
+}
+
+.lecteur {
+	text-align: center;
+}
+
+.emprunt_retour {
+	display: flex;
+	justify-content: space-around;
+}
+
+.form_emprunt_retour {
+	text-align: center;
+}
