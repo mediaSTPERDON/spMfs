@@ -17,8 +17,8 @@ hbs.registerPartials(__dirname + '/views/partials', function() {
 var mysql = require('mysql');
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'remi',
-	password: '200413',
+	user: 'username',
+	password: 'mdp',
 	database: 'mediatheque'
 });
 
