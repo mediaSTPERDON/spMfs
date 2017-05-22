@@ -1,0 +1,21 @@
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>_id</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>fonction</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each users}}
+        <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.nom}}</td>
+            <td>{{this.login}}</td>
+            <td>{{this.function}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
