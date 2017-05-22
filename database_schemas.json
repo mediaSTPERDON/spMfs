@@ -1,0 +1,24 @@
+{
+    "Users": {
+        "collection": "users",
+        "schema": {
+            "_id": "ObjectId",
+            "nom": "String",
+            "login": "String",
+            "password": "String",
+            "function": "String",
+            "office": "String",
+            "date_naiss": "String",
+            "adresse1": "String",
+            "adresse2": "String",
+            "cp": "String",
+            "city": "String",
+            "country": {
+                "type": "ObjectId",
+                "ref": "Countries"
+            },
+            "mobile_phone": "String",
+            "home_phone": "String"
+        }
+    }
+}
