@@ -1,10 +1,11 @@
+<h1>{{title}}</h1>
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Fréquentation</a></li>
 		<li><a href="#tabs-2">Emprunt / Retour</a></li>
 
 	</ul>
-	<form>
+	<form method="post" action="/createFreq">
 		<div id="tabs-1">
 
 			<div class="formulaire_frequentation">
@@ -28,7 +29,7 @@
 						</div>
 						<div class="heure form-group">
 							<label for="hours">Heure : </label><br>
-							<input type="datetime" id="setTime" name="hours" autocomplete="off" placeholder="ex : 09:30:00">
+							<input type="time" id="setTime" name="hours" autocomplete="off" placeholder="ex : 09:30:00">
 							<input type="button" id="setTimeButton" value="Heure actuelle"></input>
 						</div>
 						<div class="periode form-group">
@@ -93,7 +94,8 @@
 								<input type="Number" id="nombre1" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type1">
+								<select name="type1" id="type1">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -101,7 +103,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie1">
+								<select name="categorie1" id="categorie1">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -125,7 +128,8 @@
 								<input type="Number" id="nombre2" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type2">
+								<select name="type2" id="type2">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -133,7 +137,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie2">
+								<select name="categorie2" id="categorie2">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -156,7 +161,8 @@
 								<input type="Number" id="nombre3" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type3">
+								<select name="type3" id="type3">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -164,7 +170,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie3">
+								<select name="categorie3" id="categorie3">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -187,7 +194,8 @@
 								<input type="Number" id="nombre4" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type4">
+								<select name="type4" id="type4">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -195,7 +203,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie4">
+								<select name="categorie4" id="categorie4">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -218,7 +227,8 @@
 								<input type="Number" id="nombre5" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type5">
+								<select name="type5" id="type5">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -226,7 +236,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie5">
+								<select name="categorie5" id="categorie5">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -249,7 +260,8 @@
 								<input type="Number" id="nombre6" size="10">
 							</div>
 							<div class="type_doc form-group">
-								<select name="type" id="type6">
+								<select name="type6" id="type6">
+									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
 									<option value="documentaire">Documentaire</option>
@@ -257,7 +269,8 @@
 								</select>
 							</div>
 							<div class="categorie form-group">
-								<select name="categorie" id="categorie6">
+								<select name="categorie6" id="categorie6">
+									<option value="" selected="">Catégorie</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -298,7 +311,7 @@
 		$( "#tabs" ).tabs();
 	} );
 	$( function() {
-		$("#datepicker").datepicker();
+		$("#datepicker").datepicker(); // Choose the date format to jquery-ui.js at line 9659
 	});
 	$( function() {
 		$('#setTimeButton').on('click', function() {

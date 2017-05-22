@@ -30,6 +30,7 @@ connection.connect(function(err){
 	console.log("Database is connected");
 });
 
+
 var app = express();
 
 // view engine setup
