@@ -39,7 +39,7 @@ global.schemas = {};
 var mongoose = require('mongoose');
     console.log("Mongoose version : " + mongoose.version);
 var db = mongoose.connect("mongodb://127.0.0.1/spMfs");
-    console.log(db)
+    //console.log(db)
 
 mongoose.connection.on("error", function () {
     console.log("Erreur de connexion a la base mongoDB");
