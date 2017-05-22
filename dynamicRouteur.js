@@ -22,7 +22,7 @@ function manageAction(req, res, next) {
     // Il faut supprimer pour le routage le param après l'action
     if (path.split('/').length > 0) path = '/'+path.split('/')[1]
     	type = req.method;
-    if (typeof GLOBAL.actions_json[type + path] == 'undefined') {
+    if (typeof global.actions_json[type + path] == 'undefined') {
     	console.log("Erreur pas d'action : " + path);
     	next();
     }
