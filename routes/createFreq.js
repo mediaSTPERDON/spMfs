@@ -33,24 +33,23 @@ router.route('/').post(function(req, res, next) {
 		} else {
 			req.body.vne = 1 ;
 		}
-		var sql = "INSERT INTO frequentation (jour_semaine, date, heure, consult_place, vne, vacances) VALUES ('"+req.body.jour+"', '"+req.body.date+"', '"+req.body.hours+"', '"+req.body.consult_place+"', '"+req.body.vne+"', '"+req.body.vacances+"')";
+
+		if (req.body.emprunt_retour == undefined) {
+			req.body.emprunt_retour = "";
+		}
+
+		console.log(req.body);
+		var sql = "INSERT INTO frequentation (jour_semaine, date, heure, consult_place, vne, vacances, id_lecteurs) VALUES ('"+req.body.jour+"', '"+req.body.date+"', '"+req.body.hours+"', '"+req.body.consult_place+"', '"+req.body.vne+"', '"+req.body.vacances+"', '"+req.body.lecteur+"')";
 		//var values = [jour_semaine, date, heure, consult_place, vne, vacances];
 		connection.query(sql, function(err, result) {
 			if(err) throw err;
 			console.log("result : ", result.affectedRows);
 		});
 	});
-
-	
-	
-	/*console.log('jour : '+jour_semaine);
-	console.log('date : '+date);
-	console.log('heure : '+heure);
-	console.log('vne : '+ vne);
-	console.log('vacances : ' + vacances);
-	console.log('consult_place : '+ consult_place);*/
 	
 	res.render('frequentation', { title: 'Formulaire enregistré avec succès' });
 });
+
+
 
 module.exports = router;

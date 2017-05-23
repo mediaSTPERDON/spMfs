@@ -27,7 +27,7 @@ connection.connect(function (err) {
         console.log('error connecting mysql database');
         return;
     }
-    console.log("Database mysql is connected");
+    console.log("Mysql database is connected");
 });
 
 
@@ -57,8 +57,8 @@ for (modelName in database_schemas) {
 }
 /* chargement configuration JSON des actions --> controleurs */
 global.actions_json = JSON.parse(fs.readFileSync("./routes/config_actions.json", 'utf8'));
-    console.log('data_schemas : ', database_schemas);
-    console.log('actions_json : ', actions_json);
+    //console.log('data_schemas : ', database_schemas);
+    //console.log('actions_json : ', actions_json);
 
 /* On obtient un tableau de Models à partir des schémas accessible via
  * la variable global.schemas qui permettent d'exécuter des requêtes.*/
