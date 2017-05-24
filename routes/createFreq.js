@@ -6,12 +6,10 @@ var mysql = require('mysql');
 router.route('/').post(function(req, res, next) {
 
 	    console.log('req.body.data :',req.body.data);
-
         req.body = require("querystring").parse(req.body.data);
-
         console.log(' req.body :',req.body);
-
         var message = "données enregistrées";
+
 		if (req.body.vacances == undefined) {
 			req.body.vacances = 0 ;
 		} else {
