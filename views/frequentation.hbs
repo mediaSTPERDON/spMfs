@@ -1,10 +1,9 @@
-<h1>{{title}}</h1>
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Fréquentation</a></li>
 		<li><a href="#tabs-2">Emprunt / Retour</a></li>
 	</ul>
-	<form id="formFreq" method="post" action="/createFreq">
+	<form method="post" action="/createFreq">
 		<div id="tabs-1">
 
 			<div class="formulaire_frequentation">
@@ -55,7 +54,7 @@
                             <input type="hidden"  id="lecteur" name="lecteur" value="">
                             <ul compotype="comboBoxEditable" id="liste-lecteurs" class="dropdown-menu" style="height: 173px;width: 250%;overflow-y: scroll">
                                 {{#each lecteurs}}
-                                    <li class="li_lecteur" value="{{this.id}}"><a href="#">{{this.Noms}} {{this.Prenoms}}</a></li>
+                                    <li value="{{this.id}}"><a href="#">{{this.Noms}} {{this.Prenoms}}</a></li>
                                 {{/each}}
                             </ul>
                         </div>
@@ -99,15 +98,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre1">Nombre</label><br>
-								<input type="Number" id="nombre1" size="10">
+								<input type="Number" id="nombre1" size="10" name="nombre1">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type1" id="type1">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-									<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -133,15 +136,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre2">Nombre</label><br>
-								<input type="Number" id="nombre2" size="10">
+								<input type="Number" id="nombre2" size="10" name="nombre2">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type2" id="type2">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-									<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -166,15 +173,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre3">Nombre</label><br>
-								<input type="Number" id="nombre3" size="10">
+								<input type="Number" id="nombre3" size="10" name="nombre3">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type3" id="type3">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-								 evt.preventDefault();	<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -199,15 +210,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre4">Nombre</label><br>
-								<input type="Number" id="nombre4" size="10">
+								<input type="Number" id="nombre4" size="10" name="nombre4">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type4" id="type4">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-									<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -232,15 +247,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre5">Nombre</label><br>
-								<input type="Number" id="nombre5" size="10">
+								<input type="Number" id="nombre5" size="10" name="nombre5">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type5" id="type5">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-									<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -265,15 +284,19 @@
 						<div class="form_emprunt_retour">
 							<div class="nombre_emprunt_retour form-group">
 								<label for="nombre6">Nombre</label><br>
-								<input type="Number" id="nombre6" size="10">
+								<input type="Number" id="nombre6" size="10" name="nombre6">
 							</div>
 							<div class="type_doc form-group">
 								<select name="type6" id="type6">
 									<option value="" selected="">Type</option>
 									<option value="roman">Roman</option>
 									<option value="roman_policier">Roman Policier</option>
+									<option value="roman_sf">Roman SF</option>
+									<option value="roman_local">Roman Local</option>
+									<option value="bd">BD</option>
 									<option value="documentaire">Documentaire</option>
-									<option value="...">...</option>
+									<option value="album">Album</option>
+									<option value="dvd">DVD</option>
 								</select>
 							</div>
 							<div class="categorie form-group">
@@ -327,16 +350,19 @@
 	});
 </script>
 
-<!--script qui permet de gerer la liste deroulante des lecteurs-->
 <script>
     $(document).ready(function() {
-        $(".li_lecteur").on('click', function (evt) {
-               $('#lecteurtxt').val(evt.target.text);
+        $(document).on('click', function (evt) {
+            if (evt.target.parentElement.parentElement.attributes[0].value.indexOf('comboBoxEditable') > -1) { // si le click a lieu sur une liste dropdown
+                var ul = evt.target.parentElement.parentElement; //on récupère l'objet ul
+                $('#' + ul.previousElementSibling.id).val(evt.target.childNodes["0"].parentNode.parentNode.attributes["0"].nodeValue);
+                $('#' + ul.previousElementSibling.previousElementSibling.id).val(evt.target.childNodes["0"].data);
+            }
         });
-        <!-- search filter -->
-        $("#lecteurtxt").keyup(function (evt) {
+        ///////////// search / filter /////////////
+        $(document).keyup(function (evt) {
             console.log('evt keyup : ', evt.target);
-            var filter = evt.target.value.toLowerCase();
+            var filter = $('#' + evt.target.id).val().toLowerCase();
             var ul = evt.target.nextElementSibling.nextElementSibling; // positionneemnt sur ul
             var li = ul.getElementsByTagName('li');
             for (var i = 0; i < li.length; i++) {
@@ -347,14 +373,6 @@
                     li[i].style.display = "none";
                 }
             }
-        });
-        // a quoi ça sert ?
-        $('#formFreq').submit(function (evt) {
-            evt.preventDefault();
-            $.post('/createFreq', { data: $('#formFreq').serialize()}, function(data) {
-                alert(data.message);
-                $('#formFreq')[0].reset();
-            });
         });
     });
 </script>
