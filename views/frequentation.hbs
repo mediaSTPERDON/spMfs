@@ -4,7 +4,7 @@
 		<li><a href="#tabs-1">Fréquentation</a></li>
 		<li><a href="#tabs-2">Emprunt / Retour</a></li>
 	</ul>
-	<form method="post" action="/createFreq">
+	<form id="formFreq" method="post" action="/createFreq">
 		<div id="tabs-1">
 
 			<div class="formulaire_frequentation">
@@ -327,6 +327,7 @@
 	});
 </script>
 
+<!--script qui permet de gerer la liste deroulante des lecteurs-->
 <script>
     $(document).ready(function() {
         $(".li_lecteur").on('click', function (evt) {
@@ -347,5 +348,17 @@
                 }
             }
         });
+        // a quoi ça sert ?
+        $('#formFreq').submit(function (evt) {
+            evt.preventDefault();
+            $.post('/createFreq', { data: $('#formFreq').serialize()}, function(data) {
+                alert(data.message);
+                $('#formFreq')[0].reset();
+            });
+        });
     });
+</script>
+
+<<script>
+
 </script>
