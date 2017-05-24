@@ -4,20 +4,14 @@ var mysql = require('mysql');
 
 /* GET home page. */
 router.route('/').post(function(req, res, next) {
-	var connection = mysql.createConnection({
-		host: 'localhost',
-		user: 'username',
-		password: 'mdp',
-		database: 'mediatheque'
-	});
-	connection.connect(function(err){
-		if(err){
-			throw err;
-			console.log('error connecting database');
-			return;
-		}
-		console.log("Database is connected");
 
+	    console.log('req.body.data :',req.body.data);
+
+        req.body = require("querystring").parse(req.body.data);
+
+        console.log(' req.body :',req.body);
+
+        var message = "données enregistrées";
 		if (req.body.vacances == undefined) {
 			req.body.vacances = 0 ;
 		} else {
@@ -35,13 +29,16 @@ router.route('/').post(function(req, res, next) {
 		}
 		var sql = "INSERT INTO frequentation (jour_semaine, date, heure, consult_place, vne, vacances) VALUES ('"+req.body.jour+"', '"+req.body.date+"', '"+req.body.hours+"', '"+req.body.consult_place+"', '"+req.body.vne+"', '"+req.body.vacances+"')";
 		//var values = [jour_semaine, date, heure, consult_place, vne, vacances];
-		connection.query(sql, function(err, result) {
-			if(err) throw err;
-			console.log("result : ", result.affectedRows);
-		});
-	});
-
-	
+		try {
+            global.connection.query(sql, function (err, result) {
+                console.log("result : ", result.affectedRows);
+                res.send({message: message}, 200);
+                res.end();
+            });
+        } catch (e){
+            res.send({message: e.message}, 200);
+            res.end();
+        }
 	
 	/*console.log('jour : '+jour_semaine);
 	console.log('date : '+date);
@@ -49,8 +46,8 @@ router.route('/').post(function(req, res, next) {
 	console.log('vne : '+ vne);
 	console.log('vacances : ' + vacances);
 	console.log('consult_place : '+ consult_place);*/
-	
-	res.render('frequentation', { title: 'Formulaire enregistré avec succès' });
+
+	/*res.redirect('/frequentation', { title: 'Formulaire enregistré avec succès' });*/
 });
 
 module.exports = router;
