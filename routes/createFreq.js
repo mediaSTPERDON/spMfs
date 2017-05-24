@@ -4,13 +4,11 @@ var mysql = require('mysql');
 
 /* GET home page. */
 router.route('/').post(function(req, res, next) {
-	var connection = mysql.createConnection({
-		host: 'localhost',
-		user: 'username',
-		password: 'mdp',
-		database: 'mediatheque'
-	});
-	connection.connect(function(err){
+        console.log('req.body.data :',req.body.data);
+        req.body = require("querystring").parse(req.body.data);
+        console.log(' req.body :',req.body);
+        var message = "données enregistrées";
+
 		if(err){
 			throw err;
 			console.log('error connecting database');
@@ -87,13 +85,17 @@ router.route('/').post(function(req, res, next) {
 		
 		console.log(req.body.nombre6);
 		//var values = [jour_semaine, date, heure, consult_place, vne, vacances];
-		connection.query(sql, function(err, result) {
-			if(err) throw err;
-			console.log("result : ", result.affectedRows);
-		});
-	});
 
-res.render('frequentation', { title: 'Formulaire enregistré avec succès' });
+        try {
+            global.connection.query(sql, function (err, result) {
+                console.log("result : ", result.affectedRows);
+                res.send({message: message}, 200);
+                res.end();
+            });
+        } catch (e){
+            res.send({message: e.message}, 200);
+            res.end();
+        }
 });
 
 
