@@ -333,7 +333,7 @@
         $(".li_lecteur").on('click', function (evt) {
                $('#lecteurtxt').val(evt.target.text);
         });
-        ///////////// search / filter /////////////
+        <!-- search filter -->
         $("#lecteurtxt").keyup(function (evt) {
             console.log('evt keyup : ', evt.target);
             var filter = evt.target.value.toLowerCase();
@@ -357,8 +357,4 @@
             });
         });
     });
-</script>
-
-<<script>
-
 </script>
