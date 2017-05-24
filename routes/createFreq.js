@@ -4,6 +4,7 @@ var mysql = require('mysql');
 
 /* GET home page. */
 router.route('/').post(function(req, res, next) {
+
         console.log('req.body.data :',req.body.data);
         req.body = require("querystring").parse(req.body.data);
         console.log(' req.body :',req.body);
