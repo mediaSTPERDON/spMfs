@@ -10,12 +10,6 @@ router.route('/').post(function(req, res, next) {
         console.log(' req.body :',req.body);
         var message = "données enregistrées";
 
-		if(err){
-			throw err;
-			console.log('error connecting database');
-			return;
-		}
-		console.log("Database is connected");
 
 		if (req.body.vacances == undefined) {
 			req.body.vacances = 'non' ;
