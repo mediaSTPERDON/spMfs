@@ -42,6 +42,10 @@
 							<label for="vne">Visiteur non emprunteur :</label>
 							<input type="checkbox" name="vne" id="vne">
 						</div>
+                        <div class="visiteur form-group">
+                            <label for="vna">Visiteur non adhérent :</label>
+                            <input type="checkbox" name="vna" id="vna">
+                        </div>
 					</div>
 				</fieldset>
 
@@ -392,13 +396,23 @@
         // Popup de confirmation d'enregistrement des données avec verification emprunt retour
         $('#formFreq').submit(function (evt) {
         	evt.preventDefault();
-            if ($('#categorie1').val() !== undefined  && (!$('#emprunt').is(':checked') && !$('#retour').is(':checked'))) {
+            if ($('#categorie1').val() !== ""  && (!$('#emprunt').is(':checked') && !$('#retour').is(':checked'))) {
                 alert("emprunt ou retour ??? :)");
             }else{
                 $.post('/createFreq', {data: $('#formFreq').serialize()}, function (data) {
                     alert(data.message);
                     $('#formFreq')[0].reset();
                 });
+            }
+        });
+
+        $('#vna').on('click', function (evt) {
+            if ($('#vna').is(':checked')) {
+                $('#lecteurtxt').val('non adherent');
+                $('#lecteur').val('0');
+            }else {
+                $('#lecteurtxt').val('');
+                $('#lecteur').val('');
             }
         });
     });
