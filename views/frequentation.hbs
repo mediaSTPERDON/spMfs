@@ -393,7 +393,7 @@
         $('#formFreq').submit(function (evt) {
         	evt.preventDefault();
             if ($('#categorie1').val() !== undefined  && (!$('#emprunt').is(':checked') && !$('#retour').is(':checked'))) {
-                alert("emprunt ou retour ??? -:)");
+                alert("emprunt ou retour ??? :)");
             }else{
                 $.post('/createFreq', {data: $('#formFreq').serialize()}, function (data) {
                     alert(data.message);
