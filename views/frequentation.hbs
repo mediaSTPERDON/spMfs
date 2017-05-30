@@ -120,7 +120,8 @@
 							<div class="categorie form-group">
 								<select name="categorie1" id="categorie1">
 									<option value="" selected="">Catégorie</option>
-									<option value="enfant">Enfant</option>
+                                    <option value="pitchoun">Pitchoun</option>
+                                    <option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -158,7 +159,8 @@
 							<div class="categorie form-group">
 								<select name="categorie2" id="categorie2">
 									<option value="" selected="">Catégorie</option>
-									<option value="enfant">Enfant</option>
+                                    <option value="pitchoun">Pitchoun</option>
+                                    <option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -195,7 +197,8 @@
 							<div class="categorie form-group">
 								<select name="categorie3" id="categorie3">
 									<option value="" selected="">Catégorie</option>
-									<option value="enfant">Enfant</option>
+                                    <option value="pitchoun">Pitchoun</option>
+                                    <option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -232,7 +235,8 @@
 							<div class="categorie form-group">
 								<select name="categorie4" id="categorie4">
 									<option value="" selected="">Catégorie</option>
-									<option value="enfant">Enfant</option>
+                                    <option value="pitchoun">Pitchoun</option>
+                                    <option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -269,6 +273,7 @@
 							<div class="categorie form-group">
 								<select name="categorie5" id="categorie5">
 									<option value="" selected="">Catégorie</option>
+                                    <option value="pitchoun">Pitchoun</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -306,6 +311,7 @@
 							<div class="categorie form-group">
 								<select name="categorie6" id="categorie6">
 									<option value="" selected="">Catégorie</option>
+                                    <option value="pitchoun">Pitchoun</option>
 									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
@@ -387,7 +393,7 @@
             }
         });
 
-        // Popup de confirmation d'enregistrement des données
+        // Popup de confirmation d'enregistrement des données avec verification emprunt retour
         $('#formFreq').submit(function (evt) {
         	evt.preventDefault();
         	if ($('#categorie1').val() !== "" && (!$('#emprunt').is(':checked') && !$('#retour').is(':checked'))) {
