@@ -5,8 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
 	res.render('stats', { title: 'Stats view' });
-	
-});
+	});
 
 
 module.exports = router;

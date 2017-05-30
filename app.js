@@ -30,11 +30,32 @@ connection.connect(function (err) {
     console.log("Mysql database is connected");
 });
 
+//----------------------------------------------------------------------------------------------------------------------
+// Configuration de la connexion à la base de données mysql : avec sequelize
+var Sequelize = require ("sequelize");
+global.sequelize = new Sequelize('mediatheque', 'username', 'mdp', {
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+    }
+});
+sequelize  // la syntaxe est celle d’une Promise
+    .authenticate()
+    .then(function(err) {
+        console.log('Connection msql sequelize has been established successfully.');
+    })
+    .catch(function (err) {
+        console.log('Unable to connect to the database:', err);
+    });
+//----------------------------------------------------------------------------------------------------------------------
 
 var app = express();
 
 //----------------------------------------------------------------------------------------------------------------------
-// Configuration de la connexion à la base de données : avec mongoose
+// Configuration de la connexion à la base de données mongodb: avec mongoose
 global.schemas = {};
 var mongoose = require('mongoose');
     console.log("Mongoose version : " + mongoose.version);
