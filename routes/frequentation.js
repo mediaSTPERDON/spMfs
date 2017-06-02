@@ -5,7 +5,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     global.connection.query('SELECT * FROM lecteurs ORDER BY Noms' , function (error, results, fields) {
         if (error) throw error;
-        //console.log('The solution is: ', results);
         res.render('frequentation', { title: 'Frequency view', lecteurs: results });
     });
 });

@@ -4,5 +4,7 @@
 	"GET/login" : {"controler" : "login"},
 	"GET/frequentation" : {"controler" : "frequentation"},
 	"GET/stats" : {"controler" : "stats"},
-	"POST/createFreq" : {"controler" : "createFreq"}
+	"POST/createFreq" : {"controler" : "createFreq"},
+	"GET/gestion" : {"controler" : "gestion"},
+	"POST/upload" : {"controler" : "upload"}
 }
