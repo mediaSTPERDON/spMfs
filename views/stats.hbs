@@ -2,18 +2,44 @@
 
 <div class="" id="output"></div>
 
-<script>
-
+<script type="text/javascript">
     $(function(){
-        Papa.parse("../csv/test.csv", {
+        var renderers = $.extend($.pivotUtilities.renderers, $.pivotUtilities.c3_renderers);
+        Papa.parse("../csv/test2.csv", {
             download: true,
             skipEmptyLines: true,
             complete: function(parsed){
                 $("#output").pivotUI(parsed.data, {
+                    /*rows: ["Petal.Length"],
+                                       cols: ["Petal.Width", "Species"],
+                                       renderer: $.pivotUtilities.c3_renderers["Scatter Chart"],
+                                       rendererOptions: { c3: { size: {width: 600, height: 600} } }*/
+                    renderers: renderers,
+                    cols: [""], rows: ["Nom Mois"],
+                    rendererName: "Horizontal Stacked Bar Chart",
+                    rowOrder: "value_z_to_a", colOrder: "value_z_to_a",
+                    rendererOptions: {
+                        c3: { data: {colors: {
+
+                        }}}
+                    }
                 });
             }
         });
     });
-
 </script>
+
+<!-- external libs -->
+<link rel="stylesheet" type="text/css" href="../css/c3_0.4.11.css">
+<script type="text/javascript" src="../js/d3_3.5.5.js"></script>
+<script type="text/javascript" src="../js/c3_0.4.11.js"></script>
+<script type="text/javascript" src="../js/jquery_1.11.2.js"></script>
+<script type="text/javascript" src="../js/jquery-ui_1.11.4.js"></script>
+<script type="text/javascript" src="../js/papaparse_4.3.2.js"></script>
+
+<!-- PivotTable.js libs -->
+<link rel="stylesheet" type="text/css" href="../pivottable/pivot.css">
+<script type="text/javascript" src="../pivottable/pivot.js"></script>
+<script type="text/javascript" src="../pivottable/c3_renderers.js"></script>
+
 
