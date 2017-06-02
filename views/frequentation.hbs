@@ -30,6 +30,7 @@
 							<input type="text" id="setTime" name="hours" autocomplete="off" placeholder="ex : 09:30:00">
 							<input type="button" id="setTimeButton" value="Heure actuelle"></input>
 						</div>
+						
 						<div class="periode form-group">
 							<label for="vacances">Vacances :</label>
 							<input type="checkbox" name="vacances" id="vacances">
@@ -42,10 +43,8 @@
 							<label for="vne">Visiteur non emprunteur :</label>
 							<input type="checkbox" name="vne" id="vne">
 						</div>
-						<div class="visiteur_non_adherent form-group">
-							<label for="vna">Visiteur non adhérent :</label>
-							<input type="checkbox" name="vna" id="vna">
-						</div>
+						
+						
 					</div>
 				</fieldset>
 
@@ -62,12 +61,41 @@
 								{{/each}}
 							</ul>
 						</div>
+						
+						<div class="visiteur_non_adherent form-group">
+							<label for="vna">Visiteur non adhérent :</label>
+							<input type="checkbox" name="vna" id="vna">
+						</div>
+						<div class="nouvel_adherent form-group">
+							<label for="nouvel_adherent">Nouvel adhérent :</label>
+							<input type="checkbox" name="nouvel_adherent" id="nouvel_adherent">
+						</div>
+						<div class="evenement form-group">
+							<label for="evenement">Evénement :</label>
+							<input type="checkbox" name="evenement" id="evenement"><br>
+							<div id="details_evt" class="hide">
+								<label for="nbr_participant_evt">Nombre de participants : </label>
+								<input type="Number" id="nbr_participant_evt" name="nbr_participant_evt"><br>
+								<label for="type_evt">Type d'événement</label>
+								<select name="type_evt" id="type_evt">
+									<option value="tout_public">Tout public</option>
+									<option value="enfant">Enfant</option>
+								</select>
+							</div>
+
+						</div>
+						
 					</div>
 				</fieldset>
 			</div>
+			<div class="commentaire">
+			<legend>Commentaires</legend>
+				<textarea name="zone_commentaire" id="zone_commentaire" cols="100" rows="10"></textarea>
+			</div>
+			
 			<br>
 
-			<button type="submit" class="btn btn-primary" id="submit_btn">Valider</button>
+			<button type="submit" class="btn btn-success" id="submit_btn">Valider</button>
 
 		</div>
 
@@ -120,7 +148,7 @@
 							<div class="categorie form-group">
 								<select name="categorie1" id="categorie1">
 									<option value="" selected="">Catégorie</option>
-                                    <option value="enfant">Enfant</option>
+									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -158,7 +186,7 @@
 							<div class="categorie form-group">
 								<select name="categorie2" id="categorie2">
 									<option value="" selected="">Catégorie</option>
-                                    <option value="enfant">Enfant</option>
+									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -195,7 +223,7 @@
 							<div class="categorie form-group">
 								<select name="categorie3" id="categorie3">
 									<option value="" selected="">Catégorie</option>
-                                    <option value="enfant">Enfant</option>
+									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -232,7 +260,7 @@
 							<div class="categorie form-group">
 								<select name="categorie4" id="categorie4">
 									<option value="" selected="">Catégorie</option>
-                                    <option value="enfant">Enfant</option>
+									<option value="enfant">Enfant</option>
 									<option value="ado">Ado</option>
 									<option value="adulte">Adulte</option>
 								</select>
@@ -330,7 +358,7 @@
 
 			</fieldset><br>
 
-			<button type="submit" class="btn btn-primary" id="submit_btn">Valider</button>
+			<button type="submit" class="btn btn-success" id="submit_btn">Valider</button>
 
 		</div>
 
@@ -390,10 +418,13 @@
         		alert("emprunt ou retour ??? :");
         	} else if($('#datepicker').val() == "") {
         		alert("Merci de choisir une date !");
+        	} else if ($('#lecteur').val() == '') {
+        		alert("Aucun lecteur de sélectionné !");
         	} else {
         		$.post('/createFreq', {data: $('#formFreq').serialize()}, function(data) {
         			alert(data.message);
         			$('#formFreq')[0].reset();
+        			$('#details_evt').addClass('hide');
         		});
         	}
         });
@@ -407,5 +438,18 @@
         		$('#lecteur').val('');
         	}
         });
+
+        // Cacher les détails de l'événement si pas coché
+        $('#evenement').on('click', function() {
+        	if($('#evenement').is(':checked')) {
+        		$('#details_evt').removeClass('hide');
+        		$('#lecteurtxt').val('EVENEMENT');
+        		$('#lecteur').val('1');
+        	} else {
+        		$('#details_evt').addClass('hide');
+        		$('#lecteurtxt').val('');
+        		$('#lecteur').val('');
+        	}
+        })
     });
 </script>
