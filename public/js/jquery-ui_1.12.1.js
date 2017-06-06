@@ -7,7 +7,7 @@
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([ "jquery" ], factory );
+		define([ "public/js/jquery_3.2.1" ], factory );
 	} else {
 
 		// Browser globals
