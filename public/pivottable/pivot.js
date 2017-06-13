@@ -402,28 +402,28 @@
     };
     aggregators = (function(tpl) {
       return {
-        "Count": tpl.count(usFmtInt),
-        "Count Unique Values": tpl.countUnique(usFmtInt),
-        "List Unique Values": tpl.listUnique(", "),
-        "Sum": tpl.sum(usFmt),
-        "Integer Sum": tpl.sum(usFmtInt),
-        "Average": tpl.average(usFmt),
+        "Nombre": tpl.count(usFmtInt),
+        "Nombre de valeurs uniques": tpl.countUnique(usFmtInt),
+        "Liste de valeurs uniques": tpl.listUnique(", "),
+        "Somme": tpl.sum(usFmt),
+        "Somme en entiers": tpl.sum(usFmtInt),
+        "Moyenne": tpl.average(usFmt),
         "Median": tpl.median(usFmt),
         "Sample Variance": tpl["var"](1, usFmt),
-        "Sample Standard Deviation": tpl.stdev(1, usFmt),
+        "Ecart type de l'échantillon": tpl.stdev(1, usFmt),
         "Minimum": tpl.min(usFmt),
         "Maximum": tpl.max(usFmt),
-        "First": tpl.first(usFmt),
-        "Last": tpl.last(usFmt),
-        "Sum over Sum": tpl.sumOverSum(usFmt),
-        "80% Upper Bound": tpl.sumOverSumBound80(true, usFmt),
-        "80% Lower Bound": tpl.sumOverSumBound80(false, usFmt),
-        "Sum as Fraction of Total": tpl.fractionOf(tpl.sum(), "total", usFmtPct),
-        "Sum as Fraction of Rows": tpl.fractionOf(tpl.sum(), "row", usFmtPct),
-        "Sum as Fraction of Columns": tpl.fractionOf(tpl.sum(), "col", usFmtPct),
-        "Count as Fraction of Total": tpl.fractionOf(tpl.count(), "total", usFmtPct),
-        "Count as Fraction of Rows": tpl.fractionOf(tpl.count(), "row", usFmtPct),
-        "Count as Fraction of Columns": tpl.fractionOf(tpl.count(), "col", usFmtPct)
+        "Premier": tpl.first(usFmt),
+        "Dernier": tpl.last(usFmt),
+        "Ratio de sommes": tpl.sumOverSum(usFmt),
+        "Borne supérieure 80%": tpl.sumOverSumBound80(true, usFmt),
+        "Borne inférieure 80%": tpl.sumOverSumBound80(false, usFmt),
+        "Somme en proportion du totale": tpl.fractionOf(tpl.sum(), "total", usFmtPct),
+        "Somme en proportion de la ligne": tpl.fractionOf(tpl.sum(), "row", usFmtPct),
+        "Somme en proportion de la colonne": tpl.fractionOf(tpl.sum(), "col", usFmtPct),
+        "Nombre en proportion du totale": tpl.fractionOf(tpl.count(), "total", usFmtPct),
+        "Nombre en proportion de la ligne": tpl.fractionOf(tpl.count(), "row", usFmtPct),
+        "Nombre en proportion de la colonne": tpl.fractionOf(tpl.count(), "col", usFmtPct)
       };
     })(aggregatorTemplates);
     renderers = {
@@ -448,18 +448,18 @@
         aggregators: aggregators,
         renderers: renderers,
         localeStrings: {
-          renderError: "An error occurred rendering the PivotTable results.",
-          computeError: "An error occurred computing the PivotTable results.",
-          uiRenderError: "An error occurred rendering the PivotTable UI.",
-          selectAll: "Select All",
-          selectNone: "Select None",
-          tooMany: "(too many to list)",
-          filterResults: "Filter values",
-          apply: "Apply",
-          cancel: "Cancel",
-          totals: "Totals",
-          vs: "vs",
-          by: "by"
+          renderError: "Une erreur est survenue en dessinant le tableau croisé.",
+          computeError: "Une erreur est survenue en calculant le tableau croisé.",
+          uiRenderError: "Une erreur est survenue en dessinant l'interface du tableau croisé dynamique.",
+          selectAll: "Sélectionner tout",
+          selectNone: "Sélectionner rien",
+          tooMany: "(trop de valeurs à afficher)",
+          filterResults: "Filtrer les valeurs",
+          apply: "Appliquer",
+          cancel: "Annuler",
+          totals: "Totaux",
+          vs: "sur",
+          by: "par"
         }
       }
     };

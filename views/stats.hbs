@@ -5,7 +5,9 @@
 <script type="text/javascript">
     $(function(){
         var renderers = $.extend($.pivotUtilities.renderers, $.pivotUtilities.c3_renderers);
-        Papa.parse("../upload/test_adherent.csv", {
+
+        Papa.parse("../csv/frequentation.csv", {
+
             download: true,
             skipEmptyLines: true,
             delimiter: ",",
@@ -16,8 +18,8 @@
                                        renderer: $.pivotUtilities.c3_renderers["Scatter Chart"],
                                        rendererOptions: { c3: { size: {width: 600, height: 600} } }*/
                     renderers: renderers,
-                    cols: [""], rows: ["Nom Mois"],
-                    rendererName: "Horizontal Stacked Bar Chart",
+                    cols: ["type_action"], rows: ["jour_semaine"],
+                    rendererName: "Bar Chart",
                     rowOrder: "value_z_to_a", colOrder: "value_z_to_a",
                     rendererOptions: {
                         c3: { data: {colors: {
@@ -42,5 +44,3 @@
 <link rel="stylesheet" type="text/css" href="../pivottable/pivot.css">
 <script type="text/javascript" src="../pivottable/pivot.js"></script>
 <script type="text/javascript" src="../pivottable/c3_renderers.js"></script>
-
-

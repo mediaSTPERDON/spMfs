@@ -3,9 +3,10 @@
 	"GET/users" : {"controler" : "users"},
 	"GET/login" : {"controler" : "login"},
 	"GET/frequentation" : {"controler" : "frequentation"},
-	"GET/stats" : {"controler" : "stats"},
+	"GET/stats" : {"controler" : "frequentationSQL"},
 	"POST/createFreq" : {"controler" : "createFreq"},
 	"GET/gestion" : {"controler" : "gestion"},
 	"POST/upload" : {"controler" : "upload"},
-	"POST/sendFile" : {"controler": "sendFile"}
+	"POST/sendFile" : {"controler": "sendFile"},
+    "GET/frequentationSQL" : {"controler": "frequentationSQL"}
 }
