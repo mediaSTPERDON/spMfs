@@ -1,20 +1,30 @@
 var express = require('express');
 var router = express.Router();
+var formidable = require('formidable');
+var util = require('util');
 var fs = require('fs');
 
-/* GET home page. */
+
 router.post('/', function(req, res, next) {
-	/*fs.readFile(req.files.image_file.path, function (err, data) {
-  		// ...
-  		var newPath = __dirname + "/uploads/uploadedFileName";
-  		fs.writeFile(newPath, data, function (err) {
-  			res.redirect("back");
-  		});
-  	});*/
+	
+	
+	var form = new formidable.IncomingForm();
+	form.uploadDir =  'public/upload/';
 
+	// Rename the incoming file to the file's name
+	form.on('file', function(field, file) {
+		fs.rename(file.path, form.uploadDir + "/" + file.name);
+	});
 
-	res.render('gestion', { title: 'Gestion de la base de données' });
+	form.parse(req, function() {
+		res.render('gestion', {title: 'Téléchargement réussi'});
+	});
+
+	return;
+
+	//res.render('gestion', { title: 'Gestion de la base de données' });
 });
+
 
 
 module.exports = router;

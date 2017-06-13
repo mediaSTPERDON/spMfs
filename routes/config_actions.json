@@ -6,5 +6,6 @@
 	"GET/stats" : {"controler" : "stats"},
 	"POST/createFreq" : {"controler" : "createFreq"},
 	"GET/gestion" : {"controler" : "gestion"},
-	"POST/upload" : {"controler" : "upload"}
+	"POST/upload" : {"controler" : "upload"},
+	"POST/sendFile" : {"controler": "sendFile"}
 }

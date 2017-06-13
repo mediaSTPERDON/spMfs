@@ -5,9 +5,10 @@
 <script type="text/javascript">
     $(function(){
         var renderers = $.extend($.pivotUtilities.renderers, $.pivotUtilities.c3_renderers);
-        Papa.parse("../csv/test2.csv", {
+        Papa.parse("../upload/test_adherent.csv", {
             download: true,
             skipEmptyLines: true,
+            delimiter: ",",
             complete: function(parsed){
                 $("#output").pivotUI(parsed.data, {
                     /*rows: ["Petal.Length"],
