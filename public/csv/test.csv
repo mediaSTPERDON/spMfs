@@ -1,6 +1,0 @@
-"id";"id_lecteurs";"id_documents";"jour_semaine";"date";"heure";"consult_place";"ppm";"vne";"vacances";"type_action";"nbr_doc1";"nbr_doc2";"nbr_doc3";"nbr_doc4";"nbr_doc5";"nbr_doc6";"type_doc1";"type_doc2";"type_doc3";"type_doc4";"type_doc5";"type_doc6";"cat_doc1";"cat_doc2";"cat_doc3";"cat_doc4";"cat_doc5";"cat_doc6";"mdl_doc1";"mdl_doc2";"mdl_doc3";"mdl_doc4";"mdl_doc5";"mdl_doc6"
-1;10903;0;"jeudi";"2017-05-26";"11:18:19";"non";"";"non";"oui";"";0;0;0;0;0;0;"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";""
-2;10904;0;"jeudi";"2017-05-26";"11:18:56";"oui";"";"oui";"oui";"";0;0;0;0;0;0;"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";""
-3;30154;0;"mercredi";"2017-05-26";"11:21:09";"non";"";"non";"non";"";0;0;0;0;0;0;"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";""
-4;10903;0;"jeudi";"2017-05-26";"11:25:52";"non";"non";"non";"oui";"emprunt";1;2;0;0;0;0;"roman";"bd";"";"";"";"";"adulte";"ado";"";"";"";"";"non";"non";"";"";"";""
-5;10903;0;"vendredi";"2017-05-26";"14:30:40";"non";"non";"oui";"non";"retour";2;1;1;0;0;0;"documentaire";"roman_sf";"bd";"";"";"";"adulte";"adulte";"ado";"";"";"";"non";"non";"non";"";"";""

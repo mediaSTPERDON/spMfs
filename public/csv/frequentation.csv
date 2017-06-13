@@ -1,16 +1,4 @@
 "id","id_lecteurs","id_documents","jour_semaine","date","heure","consult_place","ppm","vne","vna","vacances","type_action","nbr_doc1","nbr_doc2","nbr_doc3","nbr_doc4","nbr_doc5","nbr_doc6","type_doc1","type_doc2","type_doc3","type_doc4","type_doc5","type_doc6","cat_doc1","cat_doc2","cat_doc3","cat_doc4","cat_doc5","cat_doc6","mdl_doc1","mdl_doc2","mdl_doc3","mdl_doc4","mdl_doc5","mdl_doc6","commentaire","evenement","type_evenement","nouvel_adherent","nbr_participant_evt"
-58,10907,,"lundi","""2017-04-30T22:00:00.000Z""","16:57:15","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-59,30429,,"jeudi","""2017-05-01T22:00:00.000Z""","16:44:07","oui","oui","oui","non","non","retour",1,2,1,,,,"roman_policier","roman","bd",,,,"ado","adulte","enfant",,,,"non","oui","non",,,,,,,,
-60,0,,"lundi","""2017-05-31T22:00:00.000Z""","","non",,"non","oui","non",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-61,10907,,"lundi","""2017-06-01T22:00:00.000Z""","12:35:22","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-62,10940,,"vendredi","""2017-06-01T22:00:00.000Z""","12:36:04","non",,"non","non","oui",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-63,10940,,"lundi","""2017-06-03T22:00:00.000Z""","12:38:50","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-64,1,,"vendredi","""2017-06-07T22:00:00.000Z""","13:03:14","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,"","oui","tout_public","non",50
-65,1,,"mercredi","""2017-06-06T22:00:00.000Z""","13:15:53","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,"expo gobelet","oui","enfant","non",25
-66,1,,"vendredi","""2017-06-01T22:00:00.000Z""","19:44:46","non",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,"pastor of muppets","oui","tout_public","non",100
-67,10920,,"vendredi","""2017-06-01T22:00:00.000Z""","19:47:32","non","non","non","non","non","retour",2,1,,,,,"roman_policier","bd",,,,,"adulte","adulte",,,,,"non","non",,,,,"Jolie Robe",,,"non",
-68,10903,,"lundi","""2017-06-11T22:00:00.000Z""","08:53:58","non","non","non","non","non","emprunt",1,,,,,,"bd",,,,,,"enfant",,,,,,"non",,,,,,"",,,"non",
-69,1,,"lundi","""2017-06-11T22:00:00.000Z""","08:59:05","non",,"non","non","oui",,,,,,,,,,,,,,,,,,,,,,,,,,"expo","oui","tout_public","non",100
-70,10903,,"mardi","""2017-06-12T22:00:00.000Z""","11:56:15","non","non","non","non","non","retour",2,,,,,,"roman",,,,,,"adulte",,,,,,"non",,,,,,"",,,"non",
-71,10910,,"mardi","""2017-06-12T22:00:00.000Z""","11:59:00","non","non","non","non","non","emprunt",1,,,,,,"roman",,,,,,"adulte",,,,,,"non",,,,,,"",,,"non",
-72,30154,,"mardi","""2017-06-12T22:00:00.000Z""","12:00:28","non","non","non","non","non","emprunt",1,,,,,,"roman",,,,,,"adulte",,,,,,"non",,,,,,"",,,"non",
+66,28084,,"mercredi","""2017-06-07T22:00:00.000Z""","15:30:08","non",,"non","non","oui",,,,,,,,,,,,,,,,,,,,,,,,,,"","non",,"non",
+67,17783,,"lundi","""2017-06-11T22:00:00.000Z""","15:44:52","oui",,"non","non","non",,,,,,,,,,,,,,,,,,,,,,,,,,"","non",,"non",
+68,0,,"vendredi","""2017-06-15T22:00:00.000Z""","15:48:09","non",,"non","oui","non",,,,,,,,,,,,,,,,,,,,,,,,,,"","non",,"non",

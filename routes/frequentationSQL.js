@@ -28,7 +28,7 @@ router.get('/', function(req, res, next) {
             // Be sure to provide fields if it is possible that your data array will be empty.
             console.error(err);
         }
-        res.render('stats', { title: 'Frequency view', frequentation: resultcsv });
+        res.render('stats', { title: 'Statistiques', frequentation: resultcsv });
     });
 });
 
